@@ -1,0 +1,221 @@
+
+detectNet -- loading detection network model from:
+          -- prototxt     NULL
+          -- model        /home/nvidia4/jetson-inference/python/training/detection/ssd/models/test_detect_model/ssd-mobilenet.onnx
+          -- input_blob   'input_0'
+          -- output_cvg   'scores'
+          -- output_bbox  'boxes'
+          -- mean_pixel   0.000000
+          -- class_labels /home/nvidia4/jetson-inference/python/training/detection/ssd/models/test_detect_model/labels.txt
+          -- class_colors NULL
+          -- threshold    0.500000
+          -- batch_size   1
+
+[TRT]    TensorRT version 8.6.2
+[TRT]    loading NVIDIA plugins...
+[TRT]    Registered plugin creator - ::BatchedNMSDynamic_TRT version 1
+[TRT]    Registered plugin creator - ::BatchedNMS_TRT version 1
+[TRT]    Registered plugin creator - ::BatchTilePlugin_TRT version 1
+[TRT]    Registered plugin creator - ::Clip_TRT version 1
+[TRT]    Registered plugin creator - ::CoordConvAC version 1
+[TRT]    Registered plugin creator - ::CropAndResizeDynamic version 1
+[TRT]    Registered plugin creator - ::CropAndResize version 1
+[TRT]    Registered plugin creator - ::DecodeBbox3DPlugin version 1
+[TRT]    Registered plugin creator - ::DetectionLayer_TRT version 1
+[TRT]    Registered plugin creator - ::EfficientNMS_Explicit_TF_TRT version 1
+[TRT]    Registered plugin creator - ::EfficientNMS_Implicit_TF_TRT version 1
+[TRT]    Registered plugin creator - ::EfficientNMS_ONNX_TRT version 1
+[TRT]    Registered plugin creator - ::EfficientNMS_TRT version 1
+[0;31m[TRT]    Could not register plugin creator -  ::FlattenConcat_TRT version 1
+[0m[TRT]    Registered plugin creator - ::GenerateDetection_TRT version 1
+[TRT]    Registered plugin creator - ::GridAnchor_TRT version 1
+[TRT]    Registered plugin creator - ::GridAnchorRect_TRT version 1
+[TRT]    Registered plugin creator - ::InstanceNormalization_TRT version 1
+[TRT]    Registered plugin creator - ::InstanceNormalization_TRT version 2
+[TRT]    Registered plugin creator - ::LReLU_TRT version 1
+[TRT]    Registered plugin creator - ::ModulatedDeformConv2d version 1
+[TRT]    Registered plugin creator - ::MultilevelCropAndResize_TRT version 1
+[TRT]    Registered plugin creator - ::MultilevelProposeROI_TRT version 1
+[TRT]    Registered plugin creator - ::MultiscaleDeformableAttnPlugin_TRT version 1
+[TRT]    Registered plugin creator - ::NMSDynamic_TRT version 1
+[TRT]    Registered plugin creator - ::NMS_TRT version 1
+[TRT]    Registered plugin creator - ::Normalize_TRT version 1
+[TRT]    Registered plugin creator - ::PillarScatterPlugin version 1
+[TRT]    Registered plugin creator - ::PriorBox_TRT version 1
+[TRT]    Registered plugin creator - ::ProposalDynamic version 1
+[TRT]    Registered plugin creator - ::ProposalLayer_TRT version 1
+[TRT]    Registered plugin creator - ::Proposal version 1
+[TRT]    Registered plugin creator - ::PyramidROIAlign_TRT version 1
+[TRT]    Registered plugin creator - ::Region_TRT version 1
+[TRT]    Registered plugin creator - ::Reorg_TRT version 1
+[TRT]    Registered plugin creator - ::ResizeNearest_TRT version 1
+[TRT]    Registered plugin creator - ::ROIAlign_TRT version 1
+[TRT]    Registered plugin creator - ::RPROI_TRT version 1
+[TRT]    Registered plugin creator - ::ScatterND version 1
+[TRT]    Registered plugin creator - ::SpecialSlice_TRT version 1
+[TRT]    Registered plugin creator - ::Split version 1
+[TRT]    Registered plugin creator - ::VoxelGeneratorPlugin version 1
+[TRT]    completed loading NVIDIA plugins.
+[TRT]    detected model format - ONNX  (extension '.onnx')
+[TRT]    desired precision specified for GPU: FASTEST
+[0;33m[TRT]    requested fasted precision for device GPU without providing valid calibrator, disabling INT8
+[0m[TRT]    [MemUsageChange] Init CUDA: CPU +2, GPU +0, now: CPU 40, GPU 2769 (MiB)
+[TRT]    Trying to load shared library libnvinfer_builder_resource.so.8.6.2
+[TRT]    Loaded shared library libnvinfer_builder_resource.so.8.6.2
+[TRT]    [MemUsageChange] Init builder kernel library: CPU +1154, GPU +1114, now: CPU 1230, GPU 3923 (MiB)
+[TRT]    CUDA lazy loading is enabled.
+[TRT]    native precisions detected for GPU:  FP32, FP16, INT8
+[TRT]    selecting fastest native precision for GPU:  FP16
+[TRT]    found engine cache file /home/nvidia4/jetson-inference/python/training/detection/ssd/models/test_detect_model/ssd-mobilenet.onnx.1.1.8602.GPU.FP16.engine
+[TRT]    found model checksum /home/nvidia4/jetson-inference/python/training/detection/ssd/models/test_detect_model/ssd-mobilenet.onnx.sha256sum
+[TRT]    echo "$(cat /home/nvidia4/jetson-inference/python/training/detection/ssd/models/test_detect_model/ssd-mobilenet.onnx.sha256sum) /home/nvidia4/jetson-inference/python/training/detection/ssd/models/test_detect_model/ssd-mobilenet.onnx" | sha256sum --check --status
+[TRT]    model matched checksum /home/nvidia4/jetson-inference/python/training/detection/ssd/models/test_detect_model/ssd-mobilenet.onnx.sha256sum
+[TRT]    loading network plan from engine cache... /home/nvidia4/jetson-inference/python/training/detection/ssd/models/test_detect_model/ssd-mobilenet.onnx.1.1.8602.GPU.FP16.engine
+[0;32m[TRT]    device GPU, loaded /home/nvidia4/jetson-inference/python/training/detection/ssd/models/test_detect_model/ssd-mobilenet.onnx
+[0m[TRT]    Loaded engine size: 19 MiB
+[TRT]    Deserialization required 25978 microseconds.
+[TRT]    [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +18, now: CPU 0, GPU 18 (MiB)
+[TRT]    Total per-runner device persistent memory is 3072
+[TRT]    Total per-runner host persistent memory is 219984
+[TRT]    Allocated activation device memory of size 4470784
+[TRT]    [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +5, now: CPU 0, GPU 23 (MiB)
+[TRT]    CUDA lazy loading is enabled.
+[0;33m[TRT]    The getMaxBatchSize() function should not be used with an engine built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. This function will always return 1.
+[0m[TRT]    
+[TRT]    CUDA engine context initialized on device GPU:
+[TRT]       -- layers       66
+[TRT]       -- maxBatchSize 1
+[TRT]       -- deviceMemory 4470784
+[TRT]       -- bindings     3
+[TRT]       binding 0
+                -- index   0
+                -- name    'input_0'
+                -- type    FP32
+                -- in/out  INPUT
+                -- # dims  4
+                -- dim #0  1
+                -- dim #1  3
+                -- dim #2  300
+                -- dim #3  300
+[TRT]       binding 1
+                -- index   1
+                -- name    'scores'
+                -- type    FP32
+                -- in/out  OUTPUT
+                -- # dims  3
+                -- dim #0  1
+                -- dim #1  3000
+                -- dim #2  21
+[TRT]       binding 2
+                -- index   2
+                -- name    'boxes'
+                -- type    FP32
+                -- in/out  OUTPUT
+                -- # dims  3
+                -- dim #0  1
+                -- dim #1  3000
+                -- dim #2  4
+[TRT]    
+[TRT]    binding to input 0 input_0  binding index:  0
+[TRT]    binding to input 0 input_0  dims (b=1 c=3 h=300 w=300) size=1080000
+[TRT]    binding to output 0 scores  binding index:  1
+[TRT]    binding to output 0 scores  dims (b=1 c=3000 h=21 w=1) size=252000
+[TRT]    binding to output 1 boxes  binding index:  2
+[TRT]    binding to output 1 boxes  dims (b=1 c=3000 h=4 w=1) size=48000
+[TRT]    
+[0;32m[TRT]    device GPU, /home/nvidia4/jetson-inference/python/training/detection/ssd/models/test_detect_model/ssd-mobilenet.onnx initialized.
+[0m[TRT]    detectNet -- number of object classes: 21
+[TRT]    detectNet -- maximum bounding boxes:   3000
+[TRT]    loaded 21 class labels
+[TRT]    detectNet -- number of object classes:  21
+[TRT]    loaded 0 class colors
+[0;33m[TRT]    didn't load expected number of class colors  (0 of 21)
+[0m[0;33m[TRT]    filling in remaining 21 class colors with default colors
+[0m[gstreamer] initialized gstreamer, version 1.20.3.0
+[gstreamer] gstCamera -- attempting to create device v4l2:///dev/video0
+[gstreamer] gstCamera -- found v4l2 device: C270 HD WEBCAM
+[gstreamer] v4l2-proplist, device.path=(string)/dev/video0, udev-probed=(boolean)false, device.api=(string)v4l2, v4l2.device.driver=(string)uvcvideo, v4l2.device.card=(string)"C270\ HD\ WEBCAM", v4l2.device.bus_info=(string)usb-3610000.usb-2.1, v4l2.device.version=(uint)331656, v4l2.device.capabilities=(uint)2225078273, v4l2.device.device_caps=(uint)69206017;
+[gstreamer] gstCamera -- found 36 caps for v4l2 device /dev/video0
+[gstreamer] [0] video/x-raw, format=(string)YUY2, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 10/1, 15/2, 5/1 };
+[gstreamer] [1] video/x-raw, format=(string)YUY2, width=(int)1184, height=(int)656, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 10/1, 15/2, 5/1 };
+[gstreamer] [2] video/x-raw, format=(string)YUY2, width=(int)960, height=(int)720, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 10/1, 15/2, 5/1 };
+[gstreamer] [3] video/x-raw, format=(string)YUY2, width=(int)1024, height=(int)576, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 10/1, 15/2, 5/1 };
+[gstreamer] [4] video/x-raw, format=(string)YUY2, width=(int)960, height=(int)544, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [5] video/x-raw, format=(string)YUY2, width=(int)800, height=(int)600, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [6] video/x-raw, format=(string)YUY2, width=(int)864, height=(int)480, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [7] video/x-raw, format=(string)YUY2, width=(int)800, height=(int)448, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [8] video/x-raw, format=(string)YUY2, width=(int)752, height=(int)416, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [9] video/x-raw, format=(string)YUY2, width=(int)640, height=(int)480, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [10] video/x-raw, format=(string)YUY2, width=(int)640, height=(int)360, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [11] video/x-raw, format=(string)YUY2, width=(int)544, height=(int)288, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [12] video/x-raw, format=(string)YUY2, width=(int)432, height=(int)240, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [13] video/x-raw, format=(string)YUY2, width=(int)352, height=(int)288, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [14] video/x-raw, format=(string)YUY2, width=(int)320, height=(int)240, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [15] video/x-raw, format=(string)YUY2, width=(int)320, height=(int)176, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [16] video/x-raw, format=(string)YUY2, width=(int)176, height=(int)144, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [17] video/x-raw, format=(string)YUY2, width=(int)160, height=(int)120, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [18] image/jpeg, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [19] image/jpeg, width=(int)1184, height=(int)656, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [20] image/jpeg, width=(int)960, height=(int)720, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [21] image/jpeg, width=(int)1024, height=(int)576, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [22] image/jpeg, width=(int)960, height=(int)544, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [23] image/jpeg, width=(int)800, height=(int)600, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [24] image/jpeg, width=(int)864, height=(int)480, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [25] image/jpeg, width=(int)800, height=(int)448, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [26] image/jpeg, width=(int)752, height=(int)416, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [27] image/jpeg, width=(int)640, height=(int)480, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [28] image/jpeg, width=(int)640, height=(int)360, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [29] image/jpeg, width=(int)544, height=(int)288, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [30] image/jpeg, width=(int)432, height=(int)240, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [31] image/jpeg, width=(int)352, height=(int)288, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [32] image/jpeg, width=(int)320, height=(int)240, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [33] image/jpeg, width=(int)320, height=(int)176, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [34] image/jpeg, width=(int)176, height=(int)144, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] [35] image/jpeg, width=(int)160, height=(int)120, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction){ 30/1, 24/1, 20/1, 15/1, 10/1, 15/2, 5/1 };
+[gstreamer] gstCamera -- selected device profile:  codec=MJPEG format=unknown width=1280 height=720 framerate=30
+[gstreamer] gstCamera pipeline string:
+[gstreamer] v4l2src device=/dev/video0 do-timestamp=true ! image/jpeg, width=(int)1280, height=(int)720, framerate=30/1 ! jpegdec name=decoder ! video/x-raw ! appsink name=mysink sync=false
+[gstreamer] gstCamera successfully created device v4l2:///dev/video0
+[0;32m[video]  created gstCamera from v4l2:///dev/video0
+[0m------------------------------------------------
+gstCamera video options:
+------------------------------------------------
+  -- URI: v4l2:///dev/video0
+     - protocol:  v4l2
+     - location:  /dev/video0
+  -- deviceType: v4l2
+  -- ioType:     input
+  -- codec:      MJPEG
+  -- codecType:  cpu
+  -- width:      1280
+  -- height:     720
+  -- frameRate:  30
+  -- numBuffers: 4
+  -- zeroCopy:   true
+  -- flipMethod: none
+------------------------------------------------
+[0;33m[gstreamer] gstEncoder -- codec not specified, defaulting to H.264
+[0m[gstreamer] gstEncoder -- detected board 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'
+[0;33m[gstreamer] gstEncoder -- hardware encoder not detected, reverting to CPU encoder
+[0m[gstreamer] gstEncoder -- pipeline launch string:
+[gstreamer] appsrc name=mysource is-live=true do-timestamp=true format=3 ! x264enc name=encoder bitrate=4000 speed-preset=ultrafast tune=zerolatency ! video/x-h264 ! h264parse ! qtmux ! filesink location=output.mp4 
+[0;32m[video]  created gstEncoder from file:///home/nvidia4/my-recognition/output.mp4
+[0m------------------------------------------------
+gstEncoder video options:
+------------------------------------------------
+  -- URI: file:///home/nvidia4/my-recognition/output.mp4
+     - protocol:  file
+     - location:  output.mp4
+     - extension: mp4
+  -- deviceType: file
+  -- ioType:     output
+  -- codec:      H264
+  -- codecType:  cpu
+  -- frameRate:  30
+  -- bitRate:    4000000
+  -- numBuffers: 4
+  -- zeroCopy:   true
+------------------------------------------------
+[0;31m[OpenGL] failed to open X11 server connection.
+[0m[0;31m[OpenGL] failed to create X11 Window.
+[0m
