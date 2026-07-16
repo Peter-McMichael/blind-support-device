@@ -6,7 +6,7 @@
 
 
 
-<p>This project uses a webcam and trained dataset to recognize and identify objects and alert the user about what's in front of them. Made with NVIDIA Jetson Orin Nano. Could potentially be integrated into glasses, measure depth, and be used to guide visually impaired people. Code is entirely Python. Webcam is Logitech C270 HD Webcam. </p><br>
+<p>This project uses a webcam and trained dataset to recognize and identify objects and alert the user about what's in front of them. Made with NVIDIA Jetson Orin Nano. Could potentially be integrated into glasses, measure depth, include multiple languages, have more commands, and be used to guide visually impaired people. Code is entirely Python. Webcam is Logitech C270 HD Webcam. </p><br>
 <br>
 <p> Uses pyttsx3 library to read the detected item to the user. Uses Speech Recognition library to listen to user commands. </p> <br>
 <p>- Uses Pascal VOC 2012 Dataset for models</p> <br>
@@ -16,17 +16,12 @@
 <p>- Dataset trained and exported from .pth to .onnx file</p>
 
 
+<br>
+<br>
+<br>
+thr
+<h1> How does it work? </h1>
+<p> When an item is recognized, it is sent to the python script and read aloud with pyttsx3. If the spacebar is clicked, a voice recorder is turned on through speech recognition. If the a commmand is recognized (currently the two commands are "Volume up" and "Volume down"), a certain action like an increase or decrease in volume for the audio occurs. There is a cooldown for the distance between re-announcing the item in front of you. If no camera is found, an error message if played. Only the object with the highest confidence is announced. Every item that is announed in also logged in the terminal. </p>
 
-
-![add image descrition here](direct image link here)
-
-## The Algorithm
-
-Add an explanation of the algorithm and how it works. Make sure to include details about how the code works, what it depends on, and any other relevant info. Add images or other descriptions for your project here. 
-
-## Running this project
-
-1. Add steps for running this project.
-2. Make sure to include any required libraries that need to be installed for your project to run.
 
 [View a video explanation here](video link)
