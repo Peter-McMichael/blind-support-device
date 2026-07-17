@@ -29,3 +29,5 @@ thr
 
 
 Link to demo: https://drive.google.com/file/d/1-UXfNnzIYMi1V_P9oXhGAeYJ6xwqu3c6/view?usp=sharing
+
+For the download to work, you must download the .onnx file and save it in your project folder. You need to have a Jetson Orin Nano that works. You must have headphones connected into the Orin (Speaker isn't supported.) You need to have a working webcamera connected to the Orin. Need a keyboard attached to Orin. Must install all the neccesary libraries with "sudo pip3 instal <library>". Once everything is set up, enter the "my-recognition" folder (cd ~/my-recognition/) and run the command "sudo python3 final_project.py".  
