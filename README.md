@@ -27,4 +27,4 @@ thr
 
 <p> Project was developed in the 2026 iD NVIDIA ML & AI camp. </p>
 
-[View a video explanation here](video link)
+
